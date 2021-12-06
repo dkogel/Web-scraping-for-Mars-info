@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mars Data</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron text-center">
+            <h1>Check out the latest information about Mars!</h1>
+            <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Update Data</a></p>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <strong><h1>Latest Mars News</h1></strong>
+                    <h3>{{mars.nasa_mars_news.news_title}}</h3>
+                    <p>{{mars.nasa_mars_news.news_summary}}</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <strong><h1>Latest Featured Image</h1></strong>
+                    <img class="img-fluid" src="{{mars.jpl_featured_img}}" alt="mars_image">
+                </div>
+            </div>    
+            <div class="row">
+                <div class="col"></div>
+                    <strong><h1>Mars Facts</h1></strong>
+                    {{mars.mars_facts_table|safe}}
+                <div class="col"></div>   
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+
+                <div>
+                    <strong><h1>Mars Hemispheres:</h1></strong>
+                    <h3>{{mars.hemisphere_img_urls.cerberus.title}}</h3>
+                    <img class="img-fluid" src="{{mars.hemisphere_img_urls.cerberus.img_url}}" alt="cerberus">
+                </div>
+
+                <div>
+                    <h3>{{mars.hemisphere_img_urls.schiaparelli.title}}</h3>
+                    <img class="img-fluid"  src="{{mars.hemisphere_img_urls.schiaparelli.img_url}}" alt="schiaparelli">
+                </div>
+
+                <div>
+                    <h3>{{mars.hemisphere_img_urls.syrtis.title}}</h3>
+                    <img class="img-fluid" src="{{mars.hemisphere_img_urls.syrtis.img_url}}" alt="syrtis">
+                </div>
+
+                <div>
+                    <h3>{{mars.hemisphere_img_urls.valles.title}}</h3>
+                    <img class="img-fluid" src="{{mars.hemisphere_img_urls.valles.img_url}}" alt="valles">
+                </div>
+            
+      
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+
+</body>
+
+</html>
