@@ -9,69 +9,86 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 
+<style>
+    .top-buffer {margin-top:100px; }
+</style>
+
 <body>
     <div class="container">
         <div class="jumbotron text-center">
             <h1>Check out the latest information about Mars!</h1>
             <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Update Data</a></p>
         </div>
+    </div>
 
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <strong><h1>Latest Mars News</h1></strong>
-                    <h3>{{mars.nasa_mars_news.news_title}}</h3>
-                    <p>{{mars.nasa_mars_news.news_summary}}</p>
-                </div>
+    <div class="container top-buffer">
+        <div class="row">
+            <div class="col">
+                <strong>
+                    <h1>Latest Mars News</h1>
+                </strong>
+                <h3>{{mars.nasa_mars_news.news_title}}</h3>
+                <p>{{mars.nasa_mars_news.news_summary}}</p>
             </div>
         </div>
+        
 
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <strong><h1>Latest Featured Image</h1></strong>
-                    <img class="img-fluid" src="{{mars.jpl_featured_img}}" alt="mars_image">
-                </div>
-            </div>    
-            <div class="row">
-                <div class="col"></div>
-                    <strong><h1>Mars Facts</h1></strong>
-                    {{mars.mars_facts_table|safe}}
-                <div class="col"></div>   
+        
+        <div class="row top-buffer">
+            <div class="col-md-8 ">
+                <strong>
+                    <h1>Latest Featured Image</h1>
+                </strong>
+                <img class="img-thumbnail" src="{{mars.jpl_featured_img}}" alt="mars_image">
             </div>
+        
+    
+            <div class="col-md-4"></div>
+            <strong>
+                <h1>Mars Facts</h1>
+            </strong>
+            {{mars.mars_facts_table|safe}}
+            <div class="col"></div>
         </div>
+    
 
-        <div class="container">
-            <div>
-
-                <div>
-                    <strong><h1>Mars Hemispheres:</h1></strong>
-                    <h3>{{mars.hemisphere_img_urls.cerberus.title}}</h3>
-                    <img class="img-fluid" src="{{mars.hemisphere_img_urls.cerberus.img_url}}" alt="cerberus">
-                </div>
-
-                <div>
-                    <h3>{{mars.hemisphere_img_urls.schiaparelli.title}}</h3>
-                    <img class="img-fluid"  src="{{mars.hemisphere_img_urls.schiaparelli.img_url}}" alt="schiaparelli">
-                </div>
-
-                <div>
-                    <h3>{{mars.hemisphere_img_urls.syrtis.title}}</h3>
-                    <img class="img-fluid" src="{{mars.hemisphere_img_urls.syrtis.img_url}}" alt="syrtis">
-                </div>
-
-                <div>
-                    <h3>{{mars.hemisphere_img_urls.valles.title}}</h3>
-                    <img class="img-fluid" src="{{mars.hemisphere_img_urls.valles.img_url}}" alt="valles">
-                </div>
+    
             
-      
+        <div class="row top-buffer">
+            <strong>
+                <h1>Mars Hemispheres:</h1>
+            </strong>
+
+            <div class="col-md-3">
+                <h3>{{mars.hemisphere_img_urls.cerberus.title}}</h3>
+                <img class="img-thumbnail" src="{{mars.hemisphere_img_urls.cerberus.img_url}}" alt="cerberus">
+            </div>
+
+            <div class="col-md-3">
+                <h3>{{mars.hemisphere_img_urls.schiaparelli.title}}</h3>
+                <img class="img-thumbnail" src="{{mars.hemisphere_img_urls.schiaparelli.img_url}}" alt="schiaparelli">
+            </div>
+
+            <div class="col-md-3">
+                <h3>{{mars.hemisphere_img_urls.syrtis.title}}</h3>
+                <img class="img-thumbnail" src="{{mars.hemisphere_img_urls.syrtis.img_url}}" alt="syrtis">
+            </div>
+
+            <div class="col-md-3">
+                <h3>{{mars.hemisphere_img_urls.valles.title}}</h3>
+                <img class="img-thumbnail" src="{{mars.hemisphere_img_urls.valles.img_url}}" alt="valles">
             </div>
         </div>
 
+
+    
 
 
     </div>
+
+
+
+
 
 
 
