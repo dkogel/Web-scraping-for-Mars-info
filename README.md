@@ -2,6 +2,17 @@
 
 The purpose of this challenge was to practice web scraping and storing the data found in a noSQL database. Data is collected using Splinter and BeautifulSoup to pull the most up to date information and images from mulitple websites dedicated to the planet Mars, and once collected it is uploaded to a MongoDB database named `mars_info` using Flask. That updated information is then rendered to a website from that database, again using Flask as well as Jinja2 templates. The website itself uses Boostrap for it's styling. 
 
+To try out the website yourself:
+(must have MongoDB, Flask, python, and splinter installed)
+
+1. Clone this repository
+2. Open MongoDB Compass
+3. Create a new database called mars_info
+4. Open a Git Bash or Terminal window
+5. Type `python app.py` and hit `enter`
+6. Copy and paste the URL that is provided in your Git Bash or Terminal window to a web browser address bar (preferrably Chrome)
+7. Click on the `Update Data` button to run the web scraping route
+8. Observe that new data is populated on the website (all of it is scraped again and updated, but not everything will change as some of the sources don't change frequently)
 
   
   ---  
